@@ -1,0 +1,48 @@
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type SubmitLeadArgs = 
+ record {
+   city: text;
+   email: text;
+   message: opt text;
+   name: text;
+   phone: text;
+   preferredDate: opt text;
+   roofSize: opt text;
+ };
+type Product = 
+ record {
+   category: text;
+   description: text;
+   id: nat;
+   imageUrl: opt text;
+   name: text;
+ };
+type Lead = 
+ record {
+   city: text;
+   email: text;
+   id: nat;
+   message: opt text;
+   name: text;
+   phone: text;
+   preferredDate: opt text;
+   roofSize: opt text;
+   status: text;
+   submittedAt: int;
+ };
+service : {
+  _initializeAccessControl: () -> ();
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  deleteLead: (id: nat) -> (bool);
+  getCallerUserRole: () -> (UserRole) query;
+  getLeads: () -> (vec Lead) query;
+  getProducts: () -> (vec Product) query;
+  isCallerAdmin: () -> (bool) query;
+  submitLead: (args: SubmitLeadArgs) -> (nat);
+  updateLeadStatus: (id: nat, status: text) -> (bool);
+}

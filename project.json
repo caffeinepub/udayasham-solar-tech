@@ -1,0 +1,22 @@
+{
+  "overview": "Full business website for Udayasham Solar Tech — a rooftop solar installation company serving all of India. Includes a public landing page, service booking form, solar product catalog, and an admin-only lead management dashboard.",
+  "features": [
+    "Public landing page with company info, services overview, and contact details",
+    "Service booking form for customers to request rooftop solar installation",
+    "Solar product catalog with 8 pre-seeded products and category filtering",
+    "Admin lead management dashboard protected by Internet Identity login",
+    "Lead status tracking (new, contacted, quoted, closed) with delete functionality",
+    "Navigation with links to all sections; English with Marathi labels"
+  ],
+  "category": "business",
+  "tags": [
+    "solar",
+    "business-website",
+    "booking",
+    "lead-management",
+    "product-catalog",
+    "india",
+    "energy"
+  ],
+  "last_updated": "2026-04-07T17:36:10.928Z"
+}
